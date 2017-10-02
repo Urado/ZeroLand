@@ -8,6 +8,13 @@ namespace ZeroLand.DataClasses.MapEntities
 {
     public class GroupActors : BaseMapEnitity
     {
-        public List<Actor> Actors { get; set; }
+        public ICollection<Actor> Actors { get; set; }
+        public ICollection<Resourse> Resourses { get; set; }
+
+        public GroupActors()
+        {
+            Actors = new HashSet<Actor>();
+            Resourses = new HashSet<Resourse>();
+        }
     }
 }

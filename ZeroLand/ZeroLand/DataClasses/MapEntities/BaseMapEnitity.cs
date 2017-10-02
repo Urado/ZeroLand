@@ -9,24 +9,28 @@ namespace ZeroLand.DataClasses.MapEntities
 {
     public class BaseMapEnitity
     {
+        public int EntityId { get; set; }
+
         public double CollisionRadius { get; set; }
 
         public double DetectingRadius { get; set; }
 
-        public double X { get; set; }
-
-        public double Y { get; set; }
+        public Point Position { get; set; }
 
         public string Name { get; set; }
 
+        public int KeeperId { get; set; }
+
+        public Keeper EnitityKeeper { get; set; }
+
         public bool IsDetected(BaseMapEnitity enitity)
         {
-            return Sqrt(Pow(X - enitity.X, 2) + Pow(Y - enitity.Y, 2)) <= DetectingRadius + enitity.CollisionRadius;
+            return Sqrt(Pow(Position.X - enitity.Position.X, 2) + Pow(Position.Y - enitity.Position.Y, 2)) <= DetectingRadius + enitity.CollisionRadius;
         }
 
         public bool IsCollided(BaseMapEnitity enitity)
         {
-            return Sqrt(Pow(X - enitity.X, 2) + Pow(Y - enitity.Y, 2)) <= CollisionRadius + enitity.CollisionRadius;
+            return Sqrt(Pow(Position.X - enitity.Position.X, 2) + Pow(Position.Y - enitity.Position.Y, 2)) <= CollisionRadius + enitity.CollisionRadius;
         }
     }
 }

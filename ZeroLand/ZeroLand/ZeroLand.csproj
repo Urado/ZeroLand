@@ -47,7 +47,10 @@
     <Compile Include="DataClasses\MapEntities\BaseMapEnitity.cs" />
     <Compile Include="DataClasses\MapEntities\GroupActors.cs" />
     <Compile Include="DataClasses\MapEntities\Keeper.cs" />
+    <Compile Include="DataClasses\MapEntities\Mine.cs" />
+    <Compile Include="DataClasses\MapEntities\Resourse.cs" />
     <Compile Include="DataClasses\MapEntities\Town.cs" />
+    <Compile Include="DataClasses\Point.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

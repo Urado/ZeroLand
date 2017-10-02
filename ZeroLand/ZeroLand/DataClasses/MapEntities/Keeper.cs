@@ -6,8 +6,16 @@ using System.Threading.Tasks;
 
 namespace ZeroLand.DataClasses.MapEntities
 {
-    class Keeper
+    public class Keeper
     {
-        public virtual List<BaseMapEnitity> KeptEnitity { get; set; }
+        public int KeeperId { get; set; }
+        public string Name { get; set; } 
+        public ICollection<BaseMapEnitity> KeptEnitity { get; set; }
+        public ICollection<Actor> KeptActors { get; set; }
+        public Keeper()
+        {
+            KeptEnitity = new HashSet<BaseMapEnitity>();
+            KeptActors = new HashSet<Actor>();
+        }
     }
 }
