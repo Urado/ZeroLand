@@ -1,0 +1,6 @@
+c:\users\samurai\documents\visual studio 2017\Projects\ZeroLand\ZeroLand\bin\Debug\ZeroLand.exe.config
+c:\users\samurai\documents\visual studio 2017\Projects\ZeroLand\ZeroLand\bin\Debug\ZeroLand.exe
+c:\users\samurai\documents\visual studio 2017\Projects\ZeroLand\ZeroLand\bin\Debug\ZeroLand.pdb
+c:\users\samurai\documents\visual studio 2017\Projects\ZeroLand\ZeroLand\obj\Debug\ZeroLand.csprojResolveAssemblyReference.cache
+c:\users\samurai\documents\visual studio 2017\Projects\ZeroLand\ZeroLand\obj\Debug\ZeroLand.exe
+c:\users\samurai\documents\visual studio 2017\Projects\ZeroLand\ZeroLand\obj\Debug\ZeroLand.pdb
