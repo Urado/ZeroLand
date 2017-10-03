@@ -7,9 +7,9 @@ using static System.Math;
 
 namespace ZeroLand.DataClasses.MapEntities
 {
-    public class BaseMapEnitity
+    public abstract class BaseMapEnitity
     {
-        public int EntityId { get; set; }
+        public int Id { get; set; }
 
         public double CollisionRadius { get; set; }
 

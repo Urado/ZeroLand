@@ -3,10 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Data.Linq.Mapping;
 
 namespace ZeroLand.DataClasses.MapEntities
 {
-    public class GroupActors : BaseMapEnitity
+    [Table(Name = "GroupActors")]
+    public abstract class GroupActors : BaseMapEnitity
     {
         public ICollection<Actor> Actors { get; set; }
         public ICollection<Resourse> Resourses { get; set; }

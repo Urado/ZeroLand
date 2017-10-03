@@ -12,7 +12,7 @@ namespace ZeroLand
     {
         static void Main(string[] args)
         {
-
+            DataKeeper.Init();
         }
     }
 }
