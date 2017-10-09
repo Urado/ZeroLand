@@ -17,5 +17,11 @@ namespace ZeroLand.DataClasses.MapEntities
             KeptEnitity = new HashSet<BaseMapEnitity>();
             KeptActors = new HashSet<Actor>();
         }
+
+        private const string _format = "{0}";
+        public override string ToString()
+        {
+            return string.Format(_format, Name);
+        }
     }
 }

@@ -4,13 +4,18 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Data.Entity;
+using System.Threading;
 using ZeroLand.DataClasses.MapEntities;
 
 namespace ZeroLand.DataClasses
 {
     class DataKeeper : DbContext
     {
-        public DataKeeper() : base("ZeroLand.Properties.Settings.DataBaseZeroLandConnectionString") {}
+        public static Mutex KeeperMutex = new Mutex();
+        public DataKeeper() : base("ZeroLand.Properties.Settings.DataBaseZeroLandConnectionString")
+        {
+            KeeperMutex.WaitOne();
+        }
         public static void Init()
         {
             using (var Data = new DataKeeper())
@@ -37,6 +42,7 @@ namespace ZeroLand.DataClasses
                     CollisionRadius = 5,
                     EnitityKeeper = k1
                 };
+                t1.Actors.Add(a1);
 
                 var army1 = new MovingGroup
                 {
@@ -47,6 +53,8 @@ namespace ZeroLand.DataClasses
                     EnitityKeeper = k1,
                     Move = 1
                 };
+                army1.Actors.Add(a2);
+                army1.Actors.Add(a3);
 
                 var m1 = new Mine
                 {
@@ -69,17 +77,25 @@ namespace ZeroLand.DataClasses
             {
                 foreach(var a in Data.Keepers)
                 {
-                    Console.WriteLine(a.Name);
+                    Console.WriteLine(a);
                 }
-                foreach(var a in Data.Actors)
+                Console.WriteLine();
+                foreach (var a in Data.Actors)
                 {
-                    Console.WriteLine("{0} {1}",a.Name, a.ActorKeeper.Name);
+                    Console.WriteLine(a);
                 }
-                foreach(var a in Data.Enitities)
+                Console.WriteLine();
+                foreach (var a in Data.Enitities)
                 {
-                    Console.WriteLine("{0} {1} {2} {3} {4}", a.GetType().ToString(), a.Name, a.EnitityKeeper.Name, a.Position.X, a.Position.Y);
+                    //Console.WriteLine("{0} {1} {2} {3} {4}", a.GetType().ToString(), a.Name, a.EnitityKeeper.Name, a.Position.X, a.Position.Y);
+                    Console.WriteLine(a.ToString());
                 }
             }
+        }
+        protected override void Dispose(bool disposing)
+        {
+            base.Dispose(disposing);
+            KeeperMutex.ReleaseMutex();
         }
 
         public DbSet<Keeper> Keepers { get; set; }

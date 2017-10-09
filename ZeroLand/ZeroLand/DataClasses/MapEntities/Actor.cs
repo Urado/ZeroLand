@@ -12,5 +12,12 @@ namespace ZeroLand.DataClasses.MapEntities
         public string Name { get; set; }
         public int KeeperId { get; set; }
         public Keeper ActorKeeper { get; set; }
+
+        private const string _format = "{0} from {1}";
+        public override string ToString()
+        {
+            return string.Format(_format,Name,ActorKeeper);
+        }
+
     }
 }
