@@ -32,5 +32,12 @@ namespace ZeroLand.DataClasses.MapEntities
         {
             return Sqrt(Pow(Position.X - enitity.Position.X, 2) + Pow(Position.Y - enitity.Position.Y, 2)) <= CollisionRadius + enitity.CollisionRadius;
         }
+
+        private const string _format = "{0}\nPosishon:\n{1}\nRadius: {2} Detect radius: {3}\nKeeper:\n{4}\n";
+
+        public override string ToString()
+        {
+            return string.Format(_format, Name, Position, CollisionRadius, DetectingRadius,EnitityKeeper.Name);
+        }
     }
 }
