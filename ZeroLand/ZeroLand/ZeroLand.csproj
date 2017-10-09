@@ -80,6 +80,8 @@
     <Compile Include="DataClasses\MapEntities\Resourse.cs" />
     <Compile Include="DataClasses\MapEntities\Town.cs" />
     <Compile Include="DataClasses\Point.cs" />
+    <Compile Include="Logic\MapEnitityVisitor\BaseVisitor.cs" />
+    <Compile Include="Logic\MapEnitityVisitor\IMapEnitityVisitor.cs" />
     <Compile Include="Logic\ZeroLandMainLogic.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

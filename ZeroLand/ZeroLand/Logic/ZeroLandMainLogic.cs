@@ -5,11 +5,14 @@ using System.Text;
 using System.Threading.Tasks;
 using ZeroLand.DataClasses;
 using ZeroLand.DataClasses.MapEntities;
+using ZeroLand.Logic.MapEnitityVisitor;
 
 namespace ZeroLand.Logic
 {
     class ZeroLandMainLogic
     {
+        private IMapEnitityVisitor _visitor= new BaseVisitor();
+
         public void OneTact()
         {
             var keepers = new List<Keeper>();
@@ -30,14 +33,17 @@ namespace ZeroLand.Logic
                 keepresEnitity.AddRange(allEnitities.Where(e => e.EnitityKeeper.KeeperId == keeper.KeeperId));
                 foreach (var enitity in keepresEnitity)
                 {
-                    foreach (var detected in allEnitities.Where(e => enitity.IsDetected(e) && e.KeeperId == keeper.KeeperId))
+                    foreach (var detected in allEnitities.Where(e => enitity.IsDetected(e) && e.KeeperId != keeper.KeeperId))
                         detectedEnitity.Add(detected);
-                    foreach (var Collided in allEnitities.Where(e => enitity.IsCollided(e) && e.KeeperId == keeper.KeeperId))
+                    foreach (var Collided in allEnitities.Where(e => enitity.IsCollided(e) && e.KeeperId != keeper.KeeperId))
                         collisionEnitity.Add(Collided);
                 }
 
                 foreach (var o in keepresEnitity)
-                    Console.WriteLine(o.ToString()+"\n");
+                {
+                    o.Visit(_visitor, detectedEnitity);
+                    Console.WriteLine("\n"+o.ToString() + "\n\n");
+                }
                 Console.WriteLine();
                 foreach (var o in detectedEnitity)
                     Console.WriteLine(o.ToString() + "\n");
