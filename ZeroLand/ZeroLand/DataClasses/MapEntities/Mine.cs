@@ -9,7 +9,7 @@ using ZeroLand.Logic.MapEnitityVisitor;
 namespace ZeroLand.DataClasses.MapEntities
 {
     [Table("Mine")]
-    public class Mine :BaseMapEnitity
+    public class Mine : GroupActors
     {
 
         public ResourseTypes MiningResourse { get; set; }

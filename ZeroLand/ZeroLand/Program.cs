@@ -12,23 +12,33 @@ namespace ZeroLand
 {
     class Program
     {
+        static public ZeroLandMainLogic mainLogic = new ZeroLandMainLogic();
         static void Main(string[] args)
         {
             DataKeeper.Init();
-            var MainTread= new Thread(new ThreadStart(MainTreadWorker));
+            var MainTread = new Thread(new ThreadStart(MainTreadWorker));
+            var OutTread = new Thread(new ThreadStart(OutTreadWorker));
             MainTread.Start();
+            OutTread.Start();
         }
         static void MainTreadWorker()
         {
-            var mainLogic = new ZeroLandMainLogic();
             ///*
-            while(true)
+            while (true)
             {
-                Thread.Sleep(10000);
+                Thread.Sleep(1000);
                 mainLogic.OneTact();
             }
             //*/
 
+        }
+        static void OutTreadWorker()
+        {
+            while (true)
+            {
+                Thread.Sleep(5000);
+                mainLogic.OutNow();
+            }
         }
     }
 }

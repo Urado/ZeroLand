@@ -51,7 +51,7 @@ namespace ZeroLand.DataClasses
                     DetectingRadius = 50,
                     CollisionRadius = 1,
                     EnitityKeeper = k1,
-                    Move = 1
+                    Move = 10
                 };
                 army1.Actors.Add(a2);
                 army1.Actors.Add(a3);

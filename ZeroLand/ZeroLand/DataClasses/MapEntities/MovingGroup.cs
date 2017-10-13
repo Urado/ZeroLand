@@ -12,7 +12,7 @@ namespace ZeroLand.DataClasses.MapEntities
     public class MovingGroup : GroupActors
     {
 
-        public int Move { get; set; }
+        public double Move { get; set; }
 
         public override void Visit(IMapEnitityVisitor visitor, ICollection<BaseMapEnitity> detected)
         {
@@ -20,10 +20,10 @@ namespace ZeroLand.DataClasses.MapEntities
             base.Visit(visitor, detected);
         }
 
-        private const string _format = "MovingGroup\n{0}";
+        private const string _format = "MovingGroup\nMoove: {0}\n{1}";
         public override string ToString()
         {
-            return string.Format(_format, base.ToString());
+            return string.Format(_format, Move,base.ToString());
         }
     }
 }
