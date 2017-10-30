@@ -1,0 +1,10 @@
+C:\Repos\ZeroLand\MapData\bin\Debug\MapData.dll
+C:\Repos\ZeroLand\MapData\bin\Debug\MapData.pdb
+C:\Repos\ZeroLand\MapData\obj\Debug\ZeroLandMapData.csprojResolveAssemblyReference.cache
+C:\Repos\ZeroLand\MapData\obj\Debug\MapData.dll
+C:\Repos\ZeroLand\MapData\obj\Debug\MapData.pdb
+C:\Repos\ZeroLand\MapData\bin\Debug\MapData.dll.config
+C:\Repos\ZeroLand\MapData\bin\Debug\EntityFramework.dll
+C:\Repos\ZeroLand\MapData\bin\Debug\EntityFramework.SqlServer.dll
+C:\Repos\ZeroLand\MapData\bin\Debug\EntityFramework.xml
+C:\Repos\ZeroLand\MapData\bin\Debug\EntityFramework.SqlServer.xml

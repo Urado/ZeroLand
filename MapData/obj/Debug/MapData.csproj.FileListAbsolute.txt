@@ -1,0 +1,5 @@
+C:\Repos\ZeroLand\MapData\obj\Debug\MapData.csprojResolveAssemblyReference.cache
+C:\Repos\ZeroLand\MapData\bin\Debug\MapData.dll
+C:\Repos\ZeroLand\MapData\bin\Debug\MapData.pdb
+C:\Repos\ZeroLand\MapData\obj\Debug\MapData.dll
+C:\Repos\ZeroLand\MapData\obj\Debug\MapData.pdb

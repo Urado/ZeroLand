@@ -62,7 +62,9 @@ namespace ZeroLand.DataClasses
                     Position = new Point { X = 10, Y = -30 },
                     DetectingRadius = 50,
                     CollisionRadius = 2,
-                    EnitityKeeper = neutral
+                    EnitityKeeper = neutral,
+                    Effectivity = 2,
+                    MiningResourse = ResourseTypes.Gold
                 };
                 Data.Enitities.AddRange(new List<BaseMapEnitity> { t1, army1, m1 });
                 k1.KeptEnitity.Add(t1);

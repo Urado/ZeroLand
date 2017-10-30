@@ -11,7 +11,7 @@ namespace ZeroLand.Logic
 {
     class ZeroLandMainLogic
     {
-        private IMapEnitityVisitor _visitor= new BaseVisitor();
+        private BaseVisitor _visitor = new BaseVisitor();
 
         public void OutNow()
         {
@@ -32,6 +32,12 @@ namespace ZeroLand.Logic
                     //Console.WriteLine("{0} {1} {2} {3} {4}", a.GetType().ToString(), a.Name, a.EnitityKeeper.Name, a.Position.X, a.Position.Y);
                     Console.WriteLine(a.ToString());
                 }
+
+                Console.WriteLine("Resourses");
+                foreach(var r in Data.Resourses)
+                {
+                    Console.WriteLine(r.ResourseId.ToString() + " " + r.ResourseType + " ");
+                }
             }
         }
 
@@ -44,6 +50,7 @@ namespace ZeroLand.Logic
 
             using (var data = new DataKeeper())
             {
+                _visitor.Data = data;
                 keepers.AddRange(data.Keepers);
                 allEnitities.AddRange(data.Enitities);
 
