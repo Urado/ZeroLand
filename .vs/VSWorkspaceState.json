@@ -1,7 +1,8 @@
 {
   "ExpandedNodes": [
     "",
-    "\\ZeroLand"
+    "\\ZeroLand",
+    "\\ZeroLand\\packages\\EntityFramework.6.1.3"
   ],
   "SelectedNode": "\\ZeroLand\\ZeroLand.sln",
   "PreviewInSolutionExplorer": false
