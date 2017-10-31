@@ -1,0 +1,15 @@
+C:\Repos\ZeroLand\ZeroLand\ZeroLand\bin\Debug\DataBaseZeroLand.mdf
+C:\Repos\ZeroLand\ZeroLand\ZeroLand\bin\Debug\DataBaseZeroLand_log.ldf
+C:\Repos\ZeroLand\ZeroLand\ZeroLand\bin\Debug\ZeroLand.exe.config
+C:\Repos\ZeroLand\ZeroLand\ZeroLand\bin\Debug\ZeroLand.exe
+C:\Repos\ZeroLand\ZeroLand\ZeroLand\bin\Debug\ZeroLand.pdb
+C:\Repos\ZeroLand\ZeroLand\ZeroLand\bin\Debug\EntityFramework.dll
+C:\Repos\ZeroLand\ZeroLand\ZeroLand\bin\Debug\EntityFramework.SqlServer.dll
+C:\Repos\ZeroLand\ZeroLand\ZeroLand\bin\Debug\MapData.dll
+C:\Repos\ZeroLand\ZeroLand\ZeroLand\bin\Debug\MapData.pdb
+C:\Repos\ZeroLand\ZeroLand\ZeroLand\bin\Debug\EntityFramework.xml
+C:\Repos\ZeroLand\ZeroLand\ZeroLand\bin\Debug\EntityFramework.SqlServer.xml
+C:\Repos\ZeroLand\ZeroLand\ZeroLand\obj\Debug\ZeroLandServer.csprojResolveAssemblyReference.cache
+C:\Repos\ZeroLand\ZeroLand\ZeroLand\obj\Debug\ZeroLand.exe
+C:\Repos\ZeroLand\ZeroLand\ZeroLand\obj\Debug\ZeroLand.pdb
+C:\Repos\ZeroLand\ZeroLand\ZeroLand\bin\Debug\MapData.dll.config

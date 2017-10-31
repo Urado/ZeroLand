@@ -10,6 +10,7 @@ namespace ZeroLand.Logic.MapEnitityVisitor
 {
     class BaseVisitor : IMapEnitityVisitor
     {
+        public DataKeeper Data { private get; set; }
         public void VisitBaseMapEnitity(BaseMapEnitity enitity, ICollection<BaseMapEnitity> detectedEnitity)
         {
             Console.WriteLine("Remember");
@@ -22,6 +23,16 @@ namespace ZeroLand.Logic.MapEnitityVisitor
 
         public void VisitMine(Mine enitity, ICollection<BaseMapEnitity> detectedEnitity)
         {
+            var newResorse = new List<Resourse>();   
+
+            for(int i=0;i<enitity.Effectivity;i++)
+            {
+                newResorse.Add(new Resourse { ResourseType = enitity.MiningResourse });
+            }
+
+            Data.Resourses.AddRange(newResorse);
+            newResorse.ForEach(r => enitity.Resourses.Add(r));
+
             Console.WriteLine("Give Money");
         }
 
@@ -31,7 +42,7 @@ namespace ZeroLand.Logic.MapEnitityVisitor
             if (target == null)
                 target = new Point { X = enitity.Position.X + enitity.Move, Y = enitity.Position.Y + enitity.Move };
 
-            double moovingRange;
+            double moovingRange; 
 
             moovingRange = (enitity.Move >= Point.Range(enitity.Position, target) - enitity.CollisionRadius) ?
                 Point.Range(enitity.Position, target) - enitity.CollisionRadius : enitity.Move;
